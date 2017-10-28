@@ -10,12 +10,13 @@
 	<script
   	src="https://code.jquery.com/jquery-3.2.1.slim.js"
   	integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
-  	<!--<script type="text/javascript" src="assets/javascript.js"></script>-->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+	<script type="text/javascript" src="moment.js"></script>
 	  <!-- Firebase JavaScript Link -->
  	 <!--<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>-->
 	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+	  	<script type="text/javascript" src="app.js"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -35,21 +36,22 @@
 				
 					<div class="panel-body" id="trainInfo">
 						<div class="row">
-							<div class="col-sm-2">Employee Name</div>
-							<div class="col-sm-2">Role</div>
-							<div class="col-sm-2">Start Date</div>
-							<div class="col-sm-2">Months Worked</div>
-							<div class="col-sm-2">Monthly Rate ($)</div>
-							<div class="col-sm-2">Total Billed ($)</div>
+						
 						</div>
-						<div class="row" id="empty">
-							<div class="col-sm-2" id="nameEmpty"></div>
-							<div class="col-sm-2" id="roleEmpty"></div>
-							<div class="col-sm-2" id="startEmpty"></div>
-							<div class="col-sm-2" id="monthsEmpty"></div>
-							<div class="col-sm-2" id="rateEmpty"></div>
-							<div class="col-sm-2" id="billedEmpty"></div>
-						</div>
+						<table class="table">
+								  <thead>
+								    <tr>
+								      <th>Employee Name</th>
+								      <th>Role</th>
+								      <th>Start Date</th>
+								      <th>Monthly Rate ($)</th>
+								      <th>Total Billed ($)</th>	      
+								    </tr>
+								  </thead>
+								  <tbody>
+								   
+								  </tbody>
+								</table>
 					</div>
 				</div>
 			</div>
@@ -74,11 +76,11 @@
 		                </div>
 						<div class="form-group">
 		                  <label for="frequency">Start Date (DD/MM/YY)</label>
-		                  <input class="form-control" id="start-date" type="number">
+		                  <input class="form-control" id="start-date" type="text">
 		                </div>  
 						<div class="form-group">
 		                  <label for="first-train-time">Monthly Rate</label>
-		                  <input class="form-control" id="monthly-rate" type="text">
+		                  <input class="form-control" id="monthly-rate" type="number">
 		                </div>
 		               
 		                
