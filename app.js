@@ -35,5 +35,22 @@ $(document).ready(function(){
 	var usersRef = firebase.database().ref("/users");
 	usersRef.on('child_added', function(data){
 		console.log(data.val());
+		console.log(data.val().name);
+		r = $("<tr>");
+		var name = $("<td>");
+		console.log(name)
+		name.append(data.val().name);
+		r.append(name);
+		var role = $("<td>");
+		role.append(data.val().role);
+		r.append(role);
+		var startDate = $("<td>");
+		startDate.append(data.val().startDate);
+		r.append(startDate);
+		var rate = $("<td>");
+		rate.append(data.val().rate);
+		r.append(rate);
+
+		$("tbody").append(r);
 	})
 })

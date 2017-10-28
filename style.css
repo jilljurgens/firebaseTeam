@@ -1,0 +1,18 @@
+.jumbotron {
+	background-color: black;
+	text-align: center;
+	color: white;
+
+}
+
+.panel-default >.panel-heading{
+	
+	font-weight: bold;
+	background-color: blue;
+	color : white;
+
+}
+
+.panel-body > #traininfo {
+	font-weight: bold;
+}
