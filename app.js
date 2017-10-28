@@ -12,9 +12,13 @@ var config = {
 // Create a variable to reference the database.
 var database = firebase.database();
 
+//put all code inside document.ready function
 $(document).ready(function(){
 	$("#submit-employee").on("click", function(event){
+		//prevent default form submission
 		event.preventDefault();
+
+		//pulling data out of the form and resetting the fields
 		var name = $("#employee-name").val().trim();
 		$("#employee-name").val("");
 		var role = $("#role").val().trim();
@@ -24,6 +28,7 @@ $(document).ready(function(){
 		var rate = $("#monthly-rate").val().trim();
 		$("#monthly-rate").val("");
 
+		//push data to database
 		database.ref("/users").push({
 			name: name,
 			role: role,
@@ -33,6 +38,7 @@ $(document).ready(function(){
 	})
 
 	var usersRef = firebase.database().ref("/users");
+	
 	usersRef.on('child_added', function(data){
 		console.log(data.val());
 		console.log(data.val().name);
