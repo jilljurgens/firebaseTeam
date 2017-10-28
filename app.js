@@ -57,13 +57,19 @@ $(document).ready(function(){
   		console.log(diffDate);
 
 //*****************************************************************
-
 		var startDate = $("<td>");
 		startDate.append(data.val().startDate);
 		r.append(startDate);
+		var billMonths = $("<td>");
+		billMonths.append(diffDate);
+		r.append(billMonths);
+		
 		var rate = $("<td>");
 		rate.append(data.val().rate);
 		r.append(rate);
+		var total = $("<td>");
+		total.append(parseInt(diffDate) * parseInt(data.val().rate));
+		r.append(total);
 
 		$("tbody").append(r);
 	})
