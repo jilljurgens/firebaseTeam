@@ -44,6 +44,20 @@ $(document).ready(function(){
 		var role = $("<td>");
 		role.append(data.val().role);
 		r.append(role);
+
+//**************** get date difference ************************
+
+        var addDate = moment(data.val().startDate);
+		console.log(addDate);
+		var dateTime = new Date(moment());
+		var interimDate = moment(dateTime).format("MM/DD/YY");
+		var endDate = moment(endDate);
+  		//console.log('Difference is ', endDate.diff(addDate, 'months'), 'months');
+  		var diffDate = endDate.diff(addDate, 'months')
+  		console.log(diffDate);
+
+//*****************************************************************
+
 		var startDate = $("<td>");
 		startDate.append(data.val().startDate);
 		r.append(startDate);
@@ -54,3 +68,5 @@ $(document).ready(function(){
 		$("tbody").append(r);
 	})
 })
+
+		
